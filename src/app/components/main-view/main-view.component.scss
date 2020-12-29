@@ -41,7 +41,6 @@
             display: flex;
             flex-grow: 1;
 
-
             .board-column {
                 display: flex;
                 flex-direction: column;
@@ -56,17 +55,33 @@
 
                 background: rgba(gray, 0.7);
 
-                &:not(:first-child){
+                &:not(:first-child) {
                     margin-left: o;
                 }
 
-                .board-column-title{
+                .board-column-title {
                     font-size: 20px;
                     font-weight: 300;
-                    font-family: 'Leto', sans-serif;
+                    font-family: "Leto", sans-serif;
                     text-transform: uppercase;
                     margin-bottom: 20px;
                     color: white;
+                    border-bottom: 1px white solid;
+                }
+
+                .task-container {
+                    flex-grow: 1;
+
+                    .task {
+                        display: flex;
+                        padding: 12px 10px;
+                        background: white;
+                        border-bottom: solid 1px #dddddd;
+                        border-radius: 4px;
+                        box-shadow: 4px 7px;
+                        margin-bottom: 15px;
+                        
+                    }
                 }
             }
         }
