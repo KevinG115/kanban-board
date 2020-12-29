@@ -24,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -88,7 +88,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -119,6 +119,15 @@
           }
         }
       }
-    }},
-  "defaultProject": "kanban-board"
+    }
+  },
+  "defaultProject": "kanban-board",
+  "cli": {
+    "analytics": "0ee5d6c1-882c-409c-82f3-df63cbefd9ef"
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
