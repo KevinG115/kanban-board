@@ -46,19 +46,19 @@
                 flex-direction: column;
                 flex-grow: 1;
                 flex-basis: 0;
-
                 min-width: 300px;
                 margin: 50px;
                 padding: 25px;
-
                 border-radius: 4px;
-
                 background: rgba(gray, 0.7);
+
+                @media screen and (max-width: 1600px) {
+                    min-width: 200px;
+                }
 
                 &:not(:first-child) {
                     margin-left: o;
                 }
-
                 .board-column-title {
                     font-size: 20px;
                     font-weight: 300;
@@ -69,25 +69,13 @@
                     border-bottom: 1px white solid;
                 }
 
-          
                 .task-container {
                     flex-grow: 1;
-
-                    .cdk-drag-preview {
-                        box-sizing: border-box;
-                        border-radius: 4px;
-                        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
-                            0 3px 14px 2px rgba(0, 0, 0, 0.12);
-                    }
 
                     .cdk-drag-placeholder {
                         opacity: 0;
                     }
-
-                    .cdk-drag-animating {
-                        transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-                    }
-                    .cdk-drop-list-dragging{
+                    .cdk-drop-list-dragging {
                         color: red;
                     }
                     .task {
@@ -97,10 +85,11 @@
                         border-bottom: solid 1px #dddddd;
                         border-radius: 4px;
                         box-shadow: 4px 7px;
-                        margin-bottom: 15px;                  
+                        margin-bottom: 15px;
+                        cursor: pointer;
                     }
 
-                    .task-done{
+                    .task-done {
                         text-decoration: line-through;
                     }
                 }
@@ -109,3 +98,22 @@
     }
 }
 
+// CDK animation styling
+
+.cdk-drag-preview {
+    box-sizing: border-box;
+    display: flex;
+    padding: 12px 10px;
+    background: white;
+    border-bottom: solid 1px #dddddd;
+    border-radius: 4px;
+    box-shadow: 4px 7px;
+    margin-bottom: 15px;
+    opacity: 0.7;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+        0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}

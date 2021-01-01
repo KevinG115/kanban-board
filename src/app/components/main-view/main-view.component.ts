@@ -13,7 +13,7 @@ export class MainViewComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  todo = ['Finish Kanban Board', 'Test number two'];
+  todo = ['Task 1', 'Task 2', 'Task 3', 'Task 4'];
   inProgress = [];
   review = [];
   done = [];
