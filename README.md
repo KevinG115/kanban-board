@@ -1,6 +1,8 @@
 # KanbanBoard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+A small lightweight Kanban board to manage tasks
+
+<img src="https://raw.githubusercontent.com/KevinG115/kanban-board/master/src/assets/kanban-board-preview.gif">
 
 ## Development server
 
